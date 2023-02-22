@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">QR Code Scanner And Generator</string>
+    <string name="camera_permission_required_text">You need camera permission</string>
+    <string name="scan_text">Scan</string>
+    <string name="generate_text">Generate</string>
+    <string name="ok_text">OK</string>
+    <string name="title_text">QR Code</string>
+    <string name="enter_info_text">Enter your info</string>
+    <string name="fill_blank_text">Please fill the blank!</string>
+    <string name="share_text">Share</string>
+</resources>

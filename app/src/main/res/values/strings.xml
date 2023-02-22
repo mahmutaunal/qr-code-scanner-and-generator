@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">QR Code Scanner And Generator</string>
+    <string name="camera_permission_required_text">Kamera izni gerekli</string>
+    <string name="scan_text">Tara</string>
+    <string name="generate_text">Oluştur</string>
+    <string name="ok_text">Tamam</string>
+    <string name="title_text">QR Code</string>
+    <string name="enter_info_text">Bilgi girin</string>
+    <string name="fill_blank_text">Lütfen alanı doldurun!</string>
+    <string name="share_text">Paylaş</string>
+</resources>
