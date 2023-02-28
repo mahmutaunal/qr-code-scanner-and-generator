@@ -1,8 +1,11 @@
 package com.mahmutalperenunal.qrcodescannerandgenerator
 
+import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.Point
+import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
 import android.text.TextUtils
 import android.view.Display
 import android.view.View
@@ -18,6 +21,8 @@ class GeneratorActivity : AppCompatActivity() {
     private lateinit var binding: ActivityGeneratorBinding
 
     private lateinit var bitmap: Bitmap
+
+    private lateinit var imageUri: Uri
 
     private lateinit var qrEncoder: QRGEncoder
 
@@ -35,6 +40,8 @@ class GeneratorActivity : AppCompatActivity() {
 
 
         binding.generateButton.setOnClickListener { generateQrCode() }
+
+        binding.shareButton.setOnClickListener { shareBitmap(bitmap) }
     }
 
     private fun generateQrCode() {
@@ -43,8 +50,6 @@ class GeneratorActivity : AppCompatActivity() {
             binding.enterInfoEditTextLayout.error = ""
             Toast.makeText(applicationContext, R.string.fill_blank_text, Toast.LENGTH_SHORT).show()
         } else {
-            binding.shareButton.visibility = View.VISIBLE
-
             // on below line we are getting service for window manager
             val windowManager: WindowManager = getSystemService(WINDOW_SERVICE) as WindowManager
 
@@ -80,11 +85,23 @@ class GeneratorActivity : AppCompatActivity() {
                 // on below line we are setting
                 // this bitmap to our image view
                 binding.generatorQrcodeImageView.setImageBitmap(bitmap)
+
+                binding.shareButton.visibility = View.VISIBLE
             } catch (e: Exception) {
                 // on below line we
                 // are handling exception
                 e.printStackTrace()
             }
         }
+    }
+
+    private fun shareBitmap(bitmap: Bitmap) {
+        val bitmapPath =
+            MediaStore.Images.Media.insertImage(contentResolver, bitmap, "palette", "share palette")
+        val bitmapUri = Uri.parse(bitmapPath)
+        val intent = Intent(Intent.ACTION_SEND)
+        intent.type = "image/png"
+        intent.putExtra(Intent.EXTRA_STREAM, bitmapUri)
+        startActivity(Intent.createChooser(intent, "Share"))
     }
 }
