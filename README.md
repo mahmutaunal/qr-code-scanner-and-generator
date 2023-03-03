@@ -31,9 +31,6 @@ The android app lets you:
 [<img src="/readme/Screenshot_20230222_191213.png" align="center"
 width="200"
     hspace="10" vspace="10">](/readme/Screenshot_20230222_191213.png)
-[<img src="/readme/Screenshot_20230228_111736.png" align="left"
-width="200"
-    hspace="10" vspace="10">](/readme/Screenshot_20230228_111736.png)
 [<img src="/readme/Screenshot_20230222_191248.png" align="center"
 width="200"
     hspace="10" vspace="10">](/readme/Screenshot_20230222_191248.png)
