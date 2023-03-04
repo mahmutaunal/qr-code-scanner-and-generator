@@ -1,12 +1,15 @@
 package com.mahmutalperenunal.qrcodescannerandgenerator
 
 import android.app.AlertDialog
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.google.zxing.Result
@@ -44,6 +47,18 @@ class ScannerActivity : AppCompatActivity(), ZXingScannerView.ResultHandler {
             AlertDialog.Builder(this, R.style.CustomAlertDialog)
                 .setTitle(R.string.title_text)
                 .setMessage(p0.toString())
+                .setPositiveButton(R.string.copy_text) {
+                        dialog, _ ->
+
+                    val clipboard: ClipboardManager =
+                        getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+                    val clip: ClipData = ClipData.newPlainText(R.string.title_text.toString(), p0.toString())
+                    clipboard.setPrimaryClip(clip)
+
+                    Toast.makeText(applicationContext, R.string.copied_text, Toast.LENGTH_SHORT).show()
+
+                    dialog.dismiss()
+                }
                 .setNegativeButton(R.string.ok_text) {
                         dialog, _ ->
                     onStop()

@@ -8,4 +8,6 @@
     <string name="enter_info_text">Enter your info</string>
     <string name="fill_blank_text">Please fill the blank!</string>
     <string name="share_text">Share</string>
+    <string name="copy_text">Copy</string>
+    <string name="copied_text">Copied</string>
 </resources>

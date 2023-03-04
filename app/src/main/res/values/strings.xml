@@ -8,4 +8,6 @@
     <string name="enter_info_text">Bilgi girin</string>
     <string name="fill_blank_text">Lütfen alanı doldurun!</string>
     <string name="share_text">Paylaş</string>
+    <string name="copy_text">Kopyala</string>
+    <string name="copied_text">Kopyalandı</string>
 </resources>
