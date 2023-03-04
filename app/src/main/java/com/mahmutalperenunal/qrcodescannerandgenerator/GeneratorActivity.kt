@@ -59,7 +59,7 @@ class GeneratorActivity : AppCompatActivity() {
 
             // on below line we are creating a variable
             // for point which is use to display in qr code
-            val point: Point = Point()
+            val point = Point()
             display.getSize(point)
 
             // on below line we are getting

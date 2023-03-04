@@ -10,4 +10,9 @@
     <string name="share_text">Share</string>
     <string name="copy_text">Copy</string>
     <string name="copied_text">Copied</string>
+    <string name="gallery_text">Gallery</string>
+    <string name="camera_text">Camera</string>
+    <string name="message_text">Please select location.</string>
+    <string name="failed_text">Something went wrong</string>
+    <string name="not_choose_image_text">You haven\'t picked Image</string>
 </resources>

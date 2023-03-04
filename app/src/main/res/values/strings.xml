@@ -10,4 +10,9 @@
     <string name="share_text">Paylaş</string>
     <string name="copy_text">Kopyala</string>
     <string name="copied_text">Kopyalandı</string>
+    <string name="gallery_text">Galeri</string>
+    <string name="camera_text">Kamera</string>
+    <string name="message_text">Lütfen konum seçin.</string>
+    <string name="failed_text">İşlem başarısız</string>
+    <string name="not_choose_image_text">Resim dosyası seçilmedi</string>
 </resources>
